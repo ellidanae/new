@@ -1,0 +1,22 @@
+<table border = 1>
+  {% for author in list %}
+  <tr>
+    <td> {{author[0]}} </td>
+    <td> {{author[1]}} </td>
+    <td> {{author[2]}} </td>      
+    <td> {{author[3]}} </td>      
+    <td> {{author[4]}} </td>
+    <td> 
+      <a href="/author?id={{author[0]}}&firstname={{author[1]}}&lastname={{author[2]}}&address={{author[3]}}&phone={{author[4]}}">
+          <img src="/static/edit.png" width="30"> 
+      </a>
+    </td>
+    <td> 
+      <a href="/delete?id={{author[0]}}">
+          <img src="/static/delete.png" width="30"> 
+      </a>
+    </td>
+
+  </tr>
+  {% endfor %}
+</table>

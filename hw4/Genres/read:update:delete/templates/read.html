@@ -1,0 +1,22 @@
+<table border = 1>
+  {% for genre in list %}
+  <tr>
+    <td> {{genre[0]}} </td>
+    <td> {{genre[1]}} </td>
+    <td> {{genre[2]}} </td>      
+    <td> {{genre[3]}} </td>      
+    <td> {{genre[4]}} </td>
+    <td> 
+      <a href="/genre?id={{genre[0]}}&name={{genre[1]}}">
+          <img src="/static/edit.png" width="30"> 
+      </a>
+    </td>
+    <td> 
+      <a href="/delete?id={{genre[0]}}">
+          <img src="/static/delete.png" width="30"> 
+      </a>
+    </td>
+
+  </tr>
+  {% endfor %}
+</table>

@@ -1,0 +1,22 @@
+<table border = 1>
+  {% for publisher in list %}
+  <tr>
+    <td> {{publisher[0]}} </td>
+    <td> {{publisher[1]}} </td>
+    <td> {{publisher[2]}} </td>      
+    <td> {{publisher[3]}} </td>      
+    <td> {{publisher[4]}} </td>
+    <td> 
+      <a href="/publisher?id={{publisher[0]}}&name={{publisher[1]}}&address={{publisher[2]}}&phone={{publisher[3]}}">
+          <img src="/static/edit.png" width="30"> 
+      </a>
+    </td>
+    <td> 
+      <a href="/delete?id={{publisher[0]}}">
+          <img src="/static/delete.png" width="30"> 
+      </a>
+    </td>
+
+  </tr>
+  {% endfor %}
+</table>
